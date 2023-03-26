@@ -1,0 +1,18 @@
+A = [[1, 2, 3], [4, 5, 6]]
+M = []
+dim = len(A)
+
+# Create an empty matrix with swapped dimensions
+for i in range(len(A[0])):
+    M.append([])
+    for j in range(dim):
+        M[i].append(0)
+
+# Fill in the values of M by transposing A
+for i in range(dim):
+    for j in range(len(A[0])):
+        M[j][i] = A[i][j]
+
+# Print the transpose of A
+for row in M:
+    print(row)
